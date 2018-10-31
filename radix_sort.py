@@ -4,12 +4,16 @@ Created on Thu Oct 18 17:15:56 2018
 
 @author: pavel
 """
+
+
+#******************My own version***************
 def radix_sort(lst):
     sorted_list = lst[:]
     backet_list = [[] for i in range(10)]
     last_digit_counter = -1
+    max_digit_len = len(str(max(sorted_list)))
 
-    while last_digit_counter != - (len(str(max(sorted_list))) + 1):
+    while last_digit_counter != - max_digit_len + 1:
         for i in sorted_list:
             try:
                 last_digit = str(i)[last_digit_counter]
@@ -34,8 +38,8 @@ def radix_sort(lst):
 unsorted = [22, 135, 456, 7, 780945, 34, 987, 5674, 5, 16, 95478, 24, 1187, 125, 134, 541, 18,69, 47, 84]
 radix_sort(unsorted)
 
-
-""" 1st ver.
+"""
+************* 1st ver.**********************
 
 def radix_sort(lst):
     output_list = lst[:]
